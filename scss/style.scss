@@ -1,0 +1,190 @@
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('../fonts/GothamBook/GothamBook.eot'),
+    url('../fonts/GothamBook/GothamBook.woff') format('woff'),
+    url('../fonts/GothamBook/GothamBook.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+
+
+
+
+
+$fontBase: 'Gotham Book';
+$sans: 'Open Sans', sans-serif;
+
+
+body {
+    background: #ffffff;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+body, form, div, p, a, img, h1, h2, h3, h4, h5, h6, table, table tr, table td {
+    border: none;
+    color: #000000;
+    font-family: Arial;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+input,
+textarea,
+select {
+    outline: none;
+    font-family: Arial;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: underline;
+    outline: none;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+
+h1, h2 {
+    font-size: 20px;
+    padding: 0 0 10px 0;
+    color: #545454;
+}
+
+
+.header{
+    position: absolute;
+    z-index: 1000;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &__aligner{
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+
+.header__nav{
+
+    .nav__ul{
+        display: flex;
+
+        .nav__li{
+            list-style: none;
+            text-transform: uppercase;
+            margin: 0 10px;
+
+            .nav__link{
+                display: flex;
+                text-decoration: none;
+                font-family: $fontBase;
+                font-size: 14px;
+                color: white;
+                align-items: center;
+
+                &::before{
+                    content:'';
+                    display: inline-block;
+                    margin: 0 12px 0 0;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    border: 1px solid white;
+                }
+
+                &:hover{
+                    &::before{
+                        content: '';
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slick-track{
+    width: 0 !important;
+}
+
+.mainer{
+    max-width: 1200px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+
+.header__social{
+    display: flex;
+    align-items: center;
+
+    .social__link{
+        display: flex;
+        font-size: 30px;
+        width: 40px;
+        height: 40px;
+        border: 1px solid white;
+        border-radius: 50%;
+        padding: 5px;
+        margin: 0 10px;
+        color: white;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+.headline-slide{
+    background-image: url(../images/first-slide-back.jpg);
+    background-size: cover;
+    width: 100%;
+    padding: 370px 0 300px 0;
+
+
+
+    &__headline{
+        display: block;
+        font-family: $fontBase;
+        font-size: 80px;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0 0 10px 0;
+    }
+
+    &__headline-text{
+        display: block;
+        width: 100%;
+        font-family: $fontBase;
+        font-size: 18px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: white;
+        text-align: center;
+    }
+}
+
+.beach-slide{
+    background-image: url(../images/second-slide-back.jpg);
+    background-size: cover;
+    width: 100%;
+    padding: 370px 0 300px 0;
+}
