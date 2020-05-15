@@ -44,8 +44,8 @@
                 appendDots: $(element),
                 arrows: true,
                 asNavFor: null,
-                prevArrow: '<button class="slick-prev" aria-label="Previous" type="button">Previous</button>',
-                nextArrow: '<button class="slick-next" aria-label="Next" type="button">Next</button>',
+                prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><i class="fas fa-chevron-left"></i></button>',
+                nextArrow: '<button class="slick-next" aria-label="Next" type="button"><i class="fas fa-chevron-right"></i></button>',
                 autoplay: false,
                 autoplaySpeed: 3000,
                 centerMode: false,
@@ -1373,12 +1373,12 @@
             _.$prevArrow
                .off('click.slick')
                .on('click.slick', {
-                    message: 'previous'
+                    message: '<i class="fas fa-chevron-right"></i>'
                }, _.changeSlide);
             _.$nextArrow
                .off('click.slick')
                .on('click.slick', {
-                    message: 'next'
+                    message: '<i class="fas fa-chevron-right"></i>'
                }, _.changeSlide);
 
             if (_.options.accessibility === true) {

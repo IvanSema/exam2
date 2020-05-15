@@ -7,14 +7,25 @@
     font-style: normal;
     }
 
+@font-face {
+    font-family: 'Gotham Medium Regular';
+    src: url('../fonts/Gotham Medium Regular/Gotham\ Medium\ Regular.ttf') format('truetype'),
+    url('../fonts/Gotham Medium Regular/gotham-medium-webfont.woff') format('woff'),
+    url('../fonts/Gotham Medium Regular/gotham-medium-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    }
+
 
 
 
 
 
 $fontBase: 'Gotham Book';
-$sans: 'Open Sans', sans-serif;
-
+$fontSecondary: 'Open Sans', sans-serif;
+$fontNews: 'Gotham Medium Regular';
+$textColor: #4b5562;
+$colorSecondary: #2c4058;
 
 body {
     background: #ffffff;
@@ -118,9 +129,6 @@ h1, h2 {
     }
 }
 
-.slick-track{
-    width: 0 !important;
-}
 
 .mainer{
     max-width: 1200px;
@@ -150,6 +158,38 @@ h1, h2 {
     }
 }
 
+.slick-track {
+    display: flex;
+  }
+
+.slick-list {    
+    overflow: hidden;
+  }
+
+.slick-dots{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    z-index: 1000;
+    list-style: none;
+}
+
+[id^="slick-slide-control"]{
+    background-color: transparent;
+    font-size: 0;
+    height: 8px;
+    width: 8px;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.slick-active > button{
+    content: '';
+    background-color: #ffffff !important;
+}
 
 .headline-slide{
     background-image: url(../images/first-slide-back.jpg);
@@ -188,3 +228,249 @@ h1, h2 {
     width: 100%;
     padding: 370px 0 300px 0;
 }
+
+
+.info-block{
+    padding: 100px 0 140px 0;
+
+    &__line{
+        background-color: #2c4058;
+        width: 100px;
+        margin: 0 auto 40px auto;
+    }
+
+    &__headline{
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: $fontBase;
+        font-weight: bold;
+        color: #2c4058;
+        font-size: 44px;
+        margin: 0 auto 170px auto;
+    }
+
+    &__row{
+        display: flex;
+        margin: 0 0 210px 0;
+
+        &--mod{
+            flex-direction: row-reverse;
+            margin: 0;
+        }
+    }
+
+
+
+    &__img-block{
+        width: 630px;
+        margin: 0 70px 0 0;
+        box-shadow: -215px -70px #55b7ff;
+
+        &--mod{
+            margin: 0 0 0 70px;
+            box-shadow: 215px -70px #7e5aff;
+        }
+    }
+
+    &__description{
+        padding: 60px 0 65px 0;
+        max-width: 460px;
+    }
+}
+
+
+.description{
+    &__preheadline-text{
+        display: block;
+        font-family: $fontBase;
+        font-size: 22px;
+        color: $textColor;
+        margin: 0 0 17px 0;
+    }
+
+    &__headline{
+        display: block;
+        font-family: $fontBase;
+        font-weight: bold;
+        font-size: 44px;
+        color: $textColor;
+        margin: 0 0 44px 0;
+    }
+
+    &__text{
+        display: block;
+        font-size: 18px;
+        font-family: $fontSecondary;
+        color: $textColor; 
+        line-height: 30px;
+        margin: 0 0 40px 0;
+    }
+
+    &__btn{
+        display: block;
+        padding: 10px 20px;
+        cursor: pointer;
+        text-transform: uppercase;
+        background-color: transparent;
+        font-family: $fontBase;
+        color: $colorSecondary;;
+        border: 1px solid $colorSecondary;;
+        margin: 0 0 55px 0;
+    }
+
+    &__address{
+        font-size: 18px;
+        color: $colorSecondary;
+        font-family: $fontSecondary;
+        font-style: italic;
+    }
+}
+
+
+.news-block{
+    background-image: url(../images/news-back.jpg);
+    padding: 140px 0;
+    background-size: cover;
+    position: relative;
+
+    &__line{
+        width: 100px;
+        border-top: none;
+        display: block;
+        margin: 0 auto 40px auto;
+    }
+
+    &__headline{
+        font-family: $fontNews;
+        font-size: 44px;
+        color: white;
+        text-transform: uppercase;
+        display: block;
+        text-align: center;
+        margin: 0 0 100px 0;
+    }
+
+    &__content{
+        width: 100%;
+        max-width: 370px;
+        background-color: white;
+        margin: 0 15px;
+        box-sizing: border-box;
+    }
+}
+
+
+.content{
+
+    &__description{
+        padding: 30px 20px;
+    }
+
+    &__headline{
+        display: block;
+        font-family: $fontBase;
+        font-weight: bold;
+        font-size: 22px;
+        color: $colorSecondary;
+        line-height: 34px;
+        text-transform: uppercase;
+    }
+
+    &__text{
+        display: block;
+        font-size: 18px;
+        color: #4b5562;
+        font-family: $fontSecondary;
+        line-height: 30px;
+        margin: 0 0 40px 0;
+    }
+}
+
+.author{
+    display: flex;
+
+
+    &__info{
+        margin: 0 0 0 20px;
+    }
+
+    &__name{
+        display: block;
+        font-family: $fontBase;
+        font-size: 18px;
+        color: $colorSecondary;
+        margin: 0 0 14px 0;
+        text-transform: uppercase;
+    }
+
+    &__date{
+        font-family: $fontBase;
+        font-size: 14px;
+        color: #55b7ff;
+    }
+}
+
+
+.slider-wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.test-class > .slick-dots {
+    position: static;
+    display: flex;
+    justify-content: center;
+    
+    & li{
+        margin: 0 20px;
+    }
+}
+
+
+.slick-prev:before,
+    .slick-next:before {
+      display: none;
+    }
+    
+    .slick-prev,
+    .slick-next {
+      width: 50px;
+      height: 50px;
+      z-index:5;
+    }
+    
+    .slick-prev,.slick-prev:hover,.slick-prev:focus {
+      position: absolute;
+      top: 40%;
+      left: -60px;
+      height: 40px;
+      width: 40px;
+      border: 1px solid white;
+      border-radius: 50%;
+      background-color: transparent;
+      font-size: 0;
+      background-image: url(../images/left-arrow.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+    }
+
+
+    .slick-next,.slick-next:hover,.slick-next:focus {
+        position: absolute;
+        cursor: pointer;
+        top: 40%;
+        right: -60px;
+        height: 40px;
+        width: 40px;
+        border: 1px solid white;
+        border-radius: 50%;
+        background-color: transparent;
+        font-size: 0;
+        background-image: url(../images/right-arrow.png);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    
