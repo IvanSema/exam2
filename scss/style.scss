@@ -169,6 +169,10 @@ h1, h2 {
     .nav__ul{
         display: flex;
 
+        @media screen and (max-width: 1000px){
+            justify-content: center;
+        }
+
         .nav__li{
             list-style: none;
             text-transform: uppercase;

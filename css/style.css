@@ -177,6 +177,14 @@ h1, h2 {
   display: flex;
 }
 
+@media screen and (max-width: 1000px) {
+  .header__nav .nav__ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .header__nav .nav__ul .nav__li {
   list-style: none;
   text-transform: uppercase;
