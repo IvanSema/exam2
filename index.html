@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="//slick/slick-theme.css" />
     <script src="https://kit.fontawesome.com/bb2a3a56fb.js" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <link rel="shortcut icon" href="images/favicon.ico.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
     <title>Exam2</title>
 </head>
@@ -19,36 +21,37 @@
     <header class="header">
         <div class="mainer">
             <div class="header__aligner">
-                <div class="header__logo">
-            <img src="images/Logo.svg" alt="">
+            <svg class="header__logo">
+                <use xlink:href='images/sprite.svg#logo'></use>
+            </svg>
+
+            <div class="header__hamburger" id='ham'>
+                <hr class="hamburger__line">
+                <hr class="hamburger__line">
+                <hr class="hamburger__line">
             </div>
 
-            <div class="header__hamburger">
-                <hr class="hamburger__line">
-                <hr class="hamburger__line">
-                <hr class="hamburger__line">
-            </div>
-
+            <div class="hamburger__menu-wrapper" id='menu-js'><div class="hamburger__menu">
             <nav class="header__nav">
             <ul class="nav__ul">
             
             <li class="nav__li">
-            <a href="" class="nav__link">About Us</a>
+            <a href="" class="nav__link nav__about">About Us</a>
             </li>
             
             <li class="nav__li">
-            <a href="" class="nav__link">projects</a>
+            <a href="" class="nav__link nav__projects">projects</a>
             </li>
             
             <li class="nav__li">
-            <a href="" class="nav__link">news</a>
+            <a href="" class="nav__link nav__news">news</a>
             </li>
             
             <li class="nav__li">
-            <a href="" class="nav__link">contact</a>
+            <a href="" class="nav__link nav__contact">contact</a>
             </li>
             </ul>
-            </nav>
+            </nav></div></div>
             
             <div class="header__social">
             <a href="" class="social__link"><i class="fab fa-facebook-f"></i></a>
@@ -64,13 +67,17 @@
 
                         <h1 class="headline-slide__headline">Simple & mordern</h1>
                         <span class="headline-slide__headline-text">We make the world's beautiful every day</span>
+                        <div class="headline-slide__arrow nav__about"></div>
                     </div>
             </div>
 
             <div class="headline-slide headline-slide--yellow">
                 <div class="mainer">
-                        <h1 class="headline-slide__headline">Simple & mordern</h1>
-                        <span class="headline-slide__headline-text">We make the world's beautiful every day</span>
+                        <span class="headline-slide__headline"><svg class="svg-icon"><use xlink:href='images/sprite.svg#women-icon'></use></svg>
+                            <svg class="svg-icon"><use xlink:href='images/sprite.svg#cash'></use></svg>
+                            <svg class="svg-icon"><use xlink:href='images/sprite.svg#culture'></use></svg>
+                            <svg class="svg-icon"><use xlink:href='images/sprite.svg#radio-icon'></use></svg></span>
+                        <span class="headline-slide__headline-text">I've made SVG sprite!!!</span>
                 </div>
             </div>
 
@@ -83,21 +90,20 @@
 
             <div class="headline-slide headline-slide--violet">
                 <div class="mainer">
-                        <h1 class="headline-slide__headline">Simple & mordern</h1>
+                        <span class="headline-slide__headline">Simple & mordern</span>
                         <span class="headline-slide__headline-text">We make the world's beautiful every day</span>
                 </div>
             </div>
 
             <div class="headline-slide headline-slide--dark">
                 <div class="mainer">
-                        <h1 class="headline-slide__headline">Simple & mordern</h1>
+                        <span class="headline-slide__headline">Simple & mordern</span>
                         <span class="headline-slide__headline-text">We make the world's beautiful every day</span>
                 </div>
             </div>
     </div>
 
-
-    <div class="info-block">
+    <div class="info-block" id='about'>
         <div class="mainer">
             <hr class="info-block__line">
             <span class="info-block__headline">what we do</span>
@@ -140,7 +146,7 @@
     </div>
 
 
-    <div class="news-block">
+    <div class="news-block" id='news'>
         <div class="mainer">
             <hr class="news-block__line">
             <span class="news-block__headline">latest news</span>
@@ -283,7 +289,7 @@
     </div>
 
 
-    <div class="gallery">
+    <div class="gallery" id='projects'>
         <div class="mainer">
             <hr class="gallery__line">
             <span class="gallery__headline">gallery</span>
@@ -325,7 +331,7 @@
 
     <div class="map" id="map"></div>
 
-    <div class="form-block__wrapper"><div class="form-block">
+    <div class="form-block__wrapper"><div class="form-block" id='contact'>
     <hr class="form-block__line">
     <div class="form-block__headline">get in touch</div>
     <div class="form-block__row">
@@ -353,8 +359,11 @@
         <div class="mainer">
 
             <div class="header__aligner header__aligner--footer-mod">
-                <div class="header__logo header__logo--footer-mod">
-            <img src="images/Logo.svg" alt=""></div>
+                
+                    <svg class="header__logo header__logo--footer-mod">
+                        <use xlink:href='images/sprite.svg#logo'></use>
+                    </svg>
+        
 
             <div class="header__social header__social--footer-mod">
                 <a href="" class="social__link"><i class="fab fa-facebook-f"></i></a>
@@ -407,6 +416,55 @@
         <script async defer
         src="https://maps.googleapis.com/maps/api/js?callback=initMap">
         </script>
+
+
+<script>
+    $(function(){
+
+$('.nav__about').on('click', function(e){
+  $('html,body').stop().animate({ scrollTop: $('#about').offset().top }, 1000);
+  e.preventDefault();
+});
+
+});
+
+$(function(){
+
+$('.nav__news').on('click', function(e){
+  $('html,body').stop().animate({ scrollTop: $('#news').offset().top }, 1000);
+  e.preventDefault();
+});
+
+});
+
+
+$(function(){
+
+    $('.nav__contact').on('click', function(e){
+  $('html,body').stop().animate({ scrollTop: $('#contact').offset().top }, 1000);
+  e.preventDefault();
+});
+});
+
+
+$(function(){
+
+    $('.nav__projects').on('click', function(e){
+  $('html,body').stop().animate({ scrollTop: $('#projects').offset().top }, 1000);
+  e.preventDefault();
+});
+
+
+});
+
+$('#ham').click(function(){
+    $("#menu-js" ).toggle('show');
+    $('#ham').css('display', 'none');
+    });
+    
+
+
+</script>
 
 </body>
 

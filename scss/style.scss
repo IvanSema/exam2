@@ -124,6 +124,7 @@ h1, h2 {
     }
 
     &__logo{
+        height: 67.2px;
 
         @media screen and (max-width: 500px){
             width: 150px;
@@ -146,6 +147,22 @@ h1, h2 {
     height: 1px;
     background-color: white;
 }
+
+
+.hamburger__menu-wrapper{
+    @media screen and (max-width: 1000px){
+        display: none;
+        width: 100%;
+        z-index: 1000;
+        position: relative;
+    }
+}
+
+
+.hamburger__menu{
+    
+}
+
 
 .header__nav{
 
@@ -185,10 +202,6 @@ h1, h2 {
             }
         }
     }
-
-    @media screen and (max-width: 1000px){
-        display: none;
-    }
 }
 
 
@@ -200,6 +213,7 @@ h1, h2 {
 
     @media screen and (max-width: 1000px){
         overflow: hidden;
+        padding: 0 40px;
     }    
 }
 
@@ -259,11 +273,15 @@ h1, h2 {
 
 .slider > .slick-dots{
     position: absolute;
-    right: 10px;
+    right: 40px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1000;
     list-style: none;
+
+    & li{
+        margin: 40px 0;
+    }
 }
 
 [id^="slick-slide-control"]{
@@ -329,6 +347,7 @@ h1, h2 {
         text-transform: uppercase;
         text-align: center;
         margin: 0 0 10px 0;
+        letter-spacing: 6px;
 
         @media screen and (min-width: 550px) and (max-width: 1000px){
             font-size: 40px;
@@ -337,6 +356,21 @@ h1, h2 {
         @media screen and (max-width: 550px){
             font-size: 20px;
         }
+    }
+
+    &__arrow{
+        width: 40px;
+        height: 40px;
+        border: 1px solid white;
+        background-image: url(../images/bottom-arrow.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 50px;
+        cursor: pointer;
     }
 
     &__headline-text{
@@ -348,6 +382,7 @@ h1, h2 {
         text-transform: uppercase;
         color: white;
         text-align: center;
+        letter-spacing: 2px;
 
         @media screen and  (max-width: 1000px){
             font-size: 15px;
@@ -491,6 +526,7 @@ h1, h2 {
         font-size: 22px;
         color: $textColor;
         margin: 0 0 17px 0;
+        text-transform: uppercase;
 
         @media screen and (max-width: 1000px){
             text-align: center;
@@ -504,6 +540,7 @@ h1, h2 {
         font-size: 44px;
         color: $textColor;
         margin: 0 0 44px 0;
+        text-transform: uppercase;
 
         @media screen and (max-width: 1000px){
             text-align: center;
@@ -737,10 +774,10 @@ h1, h2 {
 .test-class > .slick-dots {
     position: static;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     
     & li{
-        margin: 0 20px;
+        margin: 50px 20px -50px 20px;
     }
 }
 
@@ -798,7 +835,10 @@ h1, h2 {
       }
 
 
-    
+.svg-icon{
+    width: 100px;
+    height: 100px;
+}    
 
 
 
