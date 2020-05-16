@@ -251,7 +251,7 @@ h1, h2 {
   font-size: 20px;
   width: 40px;
   height: 40px;
-  border: 1px solid #ad98fc;
+  border: 1px solid rgba(255, 255, 255, 0.26);
   border-radius: 50%;
   padding: 5px;
   margin: 0 10px;
