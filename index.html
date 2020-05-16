@@ -18,9 +18,17 @@
 <body>
     <header class="header">
         <div class="mainer">
-            <div class="header__aligner"><div class="header__logo">
+            <div class="header__aligner">
+                <div class="header__logo">
             <img src="images/Logo.svg" alt="">
             </div>
+
+            <div class="header__hamburger">
+                <hr class="hamburger__line">
+                <hr class="hamburger__line">
+                <hr class="hamburger__line">
+            </div>
+
             <nav class="header__nav">
             <ul class="nav__ul">
             
@@ -59,7 +67,28 @@
                     </div>
             </div>
 
-            <div class="beach-slide">
+            <div class="headline-slide headline-slide--yellow">
+                <div class="mainer">
+                        <h1 class="headline-slide__headline">Simple & mordern</h1>
+                        <span class="headline-slide__headline-text">We make the world's beautiful every day</span>
+                </div>
+            </div>
+
+            <div class="headline-slide headline-slide--green">
+                <div class="mainer">
+                        <h1 class="headline-slide__headline">Simple & mordern</h1>
+                        <span class="headline-slide__headline-text">We make the world's beautiful every day</span>
+                </div>
+            </div>
+
+            <div class="headline-slide headline-slide--violet">
+                <div class="mainer">
+                        <h1 class="headline-slide__headline">Simple & mordern</h1>
+                        <span class="headline-slide__headline-text">We make the world's beautiful every day</span>
+                </div>
+            </div>
+
+            <div class="headline-slide headline-slide--dark">
                 <div class="mainer">
                         <h1 class="headline-slide__headline">Simple & mordern</h1>
                         <span class="headline-slide__headline-text">We make the world's beautiful every day</span>
@@ -76,7 +105,7 @@
             <div class="info-block__row">
                 <div class="info-block__cell">
                     <div class="info-block__img-block">
-                        <img src="images/left-cell__img.jpg" alt="left-ctll__img">
+                        <img class="info-block__img" src="images/left-cell__img.jpg" alt="left-ctll__img">
                     </div>
                 </div>
                 <div class="info-block__cell">
@@ -85,7 +114,7 @@
                         <span class="description__headline">Trade Center</span>
                         <span class="description__text">Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are very powerful.</span>
                         <button class="description__btn">more details</button>
-                        <span class="description__address">?? New York City, United States - 1776 feet</span>    
+                        <span class="description__address"><i class="fas fa-map-marker-alt"></i> New York City, United States - 1776 feet</span>    
                         </div>
                 </div>
             </div>
@@ -94,7 +123,7 @@
             <div class="info-block__row info-block__row--mod">
                 <div class="info-block__cell">
                     <div class="info-block__img-block info-block__img-block--mod">
-                        <img src="images/right-cell__img.jpg" alt="left-ctll__img">
+                        <img class="info-block__img" src="images/right-cell__img.jpg" alt="left-ctll__img">
                     </div>
                 </div>
                 <div class="info-block__cell">
@@ -103,7 +132,7 @@
                         <span class="description__headline">Commerce Centre</span>
                         <span class="description__text">Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a digital advertising network may help.</span>
                         <button class="description__btn">more details</button>
-                        <span class="description__address">?? Hong Kong - 1588 Feet</span>    
+                        <span class="description__address"><i class="fas fa-map-marker-alt"></i> Hong Kong - 1588 Feet</span>    
                         </div>
                 </div>
             </div>
@@ -121,8 +150,8 @@
         <div class="news-block__content">
         <div class="content__row">
         <div class="content__cell">
-        <div class="content__img">
-        <img src="images/news__first.jpg" alt="news__first">
+        <div class="content__img-block">
+        <img class="content__img" src="images/news__first.jpg" alt="news__first">
         </div>
         </div>
         <div class="content__cell">
@@ -146,8 +175,8 @@
         <div class="news-block__content">
         <div class="content__row">
         <div class="content__cell">
-        <div class="content__img">
-        <img src="images/news__second.jpg" alt="news__second">
+        <div class="content__img-block">
+        <img class="content__img" src="images/news__second.jpg" alt="news__second">
         </div>
         </div>
         <div class="content__cell">
@@ -172,8 +201,8 @@
         <div class="news-block__content">
         <div class="content__row">
         <div class="content__cell">
-        <div class="content__img">
-        <img src="images/news__third.jpg" alt="news__second">
+        <div class="content__img-block">
+        <img class="content__img" src="images/news__third.jpg" alt="news__second">
         </div>
         </div>
         <div class="content__cell">
@@ -198,8 +227,8 @@
         <div class="news-block__content">
         <div class="content__row">
         <div class="content__cell">
-        <div class="content__img">
-        <img src="images/news__second.jpg" alt="news__second">
+        <div class="content__img-block">
+        <img class="content__img" src="images/news__second.jpg" alt="news__second">
         </div>
         </div>
         <div class="content__cell">
@@ -225,8 +254,8 @@
         <div class="news-block__content">
         <div class="content__row">
         <div class="content__cell">
-        <div class="content__img">
-        <img src="images/news__first.jpg" alt="news__first">
+        <div class="content__img-block">
+        <img class="content__img" src="images/news__first.jpg" alt="news__first">
         </div>
         </div>
         <div class="content__cell">
@@ -256,12 +285,90 @@
 
     <div class="gallery">
         <div class="mainer">
+            <hr class="gallery__line">
+            <span class="gallery__headline">gallery</span>
             <div class="gallery__row">
-                <div class="gallery__cell"></div>
-                <div class="gallery__cell"></div>
+                <div class="gallery__cell">
+                    <div class="gallery__big-image-block">
+                        <img class='gallery__big-image' src="images/gallery__left-big.jpg" alt="left-big-img">
+                    </div>
+                </div>
+                <div class="gallery__cell">
+                    <div class="gallery__grid">
+                        <div class="gallery__grid-cell">
+                            <div class="gallery__small-image-block">
+                                <img class="gallery__small-image" src="images/gallery__left-up.png" alt="left-up-small">
+                            </div>
+                        </div>
+                        <div class="gallery__grid-cell">
+                            <div class="gallery__small-image-block">
+                                <img class="gallery__small-image" src="images/gallery__left-down.png" alt="left-down-small"></div>
+                        </div>
+                        <div class="gallery__grid-cell">
+                            <div class="gallery__small-image-block">
+                                <img class="gallery__small-image" src="images/gallery__right-up.png" alt="right-up-small">
+                            </div>
+                        </div>
+                        <div class="gallery__grid-cell">
+                            <div class="gallery__small-image-block">
+                                <img class="gallery__small-image" src="images/gallery_right-down.png" alt="right-down-small">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <button class="description__btn description__btn--gallery-mod">see more</button>
+
         </div>
     </div>
+
+    <div class="map" id="map"></div>
+
+    <div class="form-block__wrapper"><div class="form-block">
+    <hr class="form-block__line">
+    <div class="form-block__headline">get in touch</div>
+    <div class="form-block__row">
+    <div class="form-block__cell">
+    <ul class="form-block__list">
+    <li class="form-block__info"><span class="form-block__icon"><i class="fas fa-map-marker-alt"></i></span>91 Nolan Extensions Suite 670</li>
+    <li class="form-block__info"><span class="form-block__icon"><i class="fas fa-phone-alt"></i></span>+001 356-868-2454</li>
+    <li class="form-block__info"><span class="form-block__icon"><i class="fas fa-inbox"></i></span>gahuy93@gmail.com</li>
+    <li class="form-block__info"><span class="form-block__icon"><i class="far fa-clock"></i></span>From 07:05AM to 19:30PM</li>
+    </ul>
+    </div>
+    <div class="form-block__cell">
+    <form class="form-block__form">
+    <input type="text" class="form__name" placeholder="Name" required>
+    <input type="email" class="form__email" required placeholder="Email">
+    
+    <button class="description__btn description__btn--form-mod">submit</button>
+    </form>
+    </div>
+    </div>
+    </div></div>
+
+    
+    <footer class="footer">
+        <div class="mainer">
+
+            <div class="header__aligner header__aligner--footer-mod">
+                <div class="header__logo header__logo--footer-mod">
+            <img src="images/Logo.svg" alt=""></div>
+
+            <div class="header__social header__social--footer-mod">
+                <a href="" class="social__link"><i class="fab fa-facebook-f"></i></a>
+                <a href="" class="social__link"><i class="fab fa-twitter"></i></a>
+                <a href="" class="social__link"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer__rights">
+        <span class="footer__copyrights">Copyrights © 2017 Monticello Group</span>
+        <div class="footer__line"></div>
+        <span class="footer__author">Made with <i class="fas fa-heart"></i> by Ga Huy</span>
+        </div></div>
+    </footer>
 
 
     <script>
@@ -283,6 +390,24 @@
         });
 
     </script>
+
+
+<script>
+    // Initialize and add the map
+    function initMap() {
+      // The location of Uluru
+      var uluru = {lat: 40.6886648, lng: -73.9066067};
+      // The map, centered at Uluru
+      var map = new google.maps.Map(
+          document.getElementById('map'), {zoom: 14, center: uluru});
+      // The marker, positioned at Uluru
+      var marker = new google.maps.Marker({position: uluru, map: map});
+    }
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+        </script>
+
 </body>
 
 </html>
