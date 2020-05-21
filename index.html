@@ -14,6 +14,7 @@
     <link rel="shortcut icon" href="images/favicon.ico.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
     <title>Exam2</title>
 </head>
 
@@ -108,7 +109,7 @@
             <hr class="info-block__line">
             <span class="info-block__headline">what we do</span>
 
-            <div class="info-block__row">
+            <div class="info-block__row" id='info-block__row-left'>
                 <div class="info-block__cell">
                     <div class="info-block__img-block">
                         <img class="info-block__img" src="images/left-cell__img.jpg" alt="left-ctll__img">
@@ -126,7 +127,7 @@
             </div>
 
 
-            <div class="info-block__row info-block__row--mod">
+            <div class="info-block__row info-block__row--mod" id='info-block__row-right'>
                 <div class="info-block__cell">
                     <div class="info-block__img-block info-block__img-block--mod">
                         <img class="info-block__img" src="images/right-cell__img.jpg" alt="left-ctll__img">
@@ -461,7 +462,23 @@ $('#ham').click(function(){
     $("#menu-js" ).toggle('show');
     $('#ham').css('display', 'none');
     });
-    
+</script>
+
+
+<script>
+    console.log($('#about').offset());
+
+    let target = $('#about');
+let targetPos = target.offset().top;
+let winHeight = $(window).height();
+let scrollToElem = targetPos - winHeight;
+$(window).scroll(function(){
+    let winScrollTop = $(this).scrollTop();
+  if(winScrollTop > scrollToElem){
+      $('#info-block__row-left').addClass('animate__animated animate__backInLeft');
+      $('#info-block__row-right').addClass('animate__animated animate__backInRight');
+  }
+});
 
 
 </script>
